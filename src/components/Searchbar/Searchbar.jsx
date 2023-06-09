@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { FcSearch } from "react-icons/fc";
 import PropTypes from 'prop-types';
 import {
