@@ -41,9 +41,6 @@ export default SearchBar;
 
 
 
-
-
-
 // class Searchdar extends Component {
 //   state = {
 //     searchName: '', // значення введеного пошукового запиту
