@@ -10,16 +10,9 @@ import {
 } from './Searchdar.styled.jsx';
 
 const SearchBar = ({ onSubmit }) => {
-  const [searchName, setSearchName] = useState(''); // значення введеного пошукового запиту
-  const [inputValue, setInputValue] = useState('');
-
-  const handleChange = event => setInputValue(event.target.value);
-
   const handleSubmit = event => {
     event.preventDefault();
-    setSearchName(inputValue.trim()); // отримання пошукового запиту видалення пробілів
-    onSubmit(searchName); // передача запиту батьківському компоненту
-    event.target.reset(); //збирання значення в полі введення
+     onSubmit(event.target.searchName.value.trim());
   };
 
   return (
@@ -34,7 +27,6 @@ const SearchBar = ({ onSubmit }) => {
           type="text"
           id="search"
           placeholder="Search images and photos"
-          onChange={handleChange}
         />
       </SearchForm>
     </SearchbarWrp>
